@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 29 21:08:59 2022
+# POO in python
 
-@author: Vitor
-"""
-
+def hello():
+    print('hello')
+    
+    
+x = 1
+print(type(hello))
