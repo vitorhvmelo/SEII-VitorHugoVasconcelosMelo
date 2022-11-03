@@ -1,6 +1,6 @@
 import time
-import concurrent.futures
 from PIL import Image, ImageFilter
+import concurrent.futures
 
 img_names = [
     'photo-1516117172878-fd2c41f4a759.jpg',
@@ -24,7 +24,6 @@ t1 = time.perf_counter()
 
 size = (1200, 1200)
 
-
 def process_image(img_name):
     img = Image.open(img_name)
 
@@ -34,10 +33,8 @@ def process_image(img_name):
     img.save(f'processed/{img_name}')
     print(f'{img_name} was processed...')
 
-
 with concurrent.futures.ProcessPoolExecutor() as executor:
     executor.map(process_image, img_names)
-
 
 t2 = time.perf_counter()
 
